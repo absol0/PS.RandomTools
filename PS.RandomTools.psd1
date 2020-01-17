@@ -4,7 +4,7 @@
 
 	# Script module or binary module file associated with this manifest.
 	# remove this if there is no root module and you are only used nested modules 
-	RootModule = 'PS.RandomTools.psm1'
+	#RootModule = 'PS.RandomTools.psm1'
 	
 	# Version number of this module.
 	ModuleVersion = '0.1'
