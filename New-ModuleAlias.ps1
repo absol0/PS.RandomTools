@@ -6,13 +6,13 @@ function New-ModuleAlias {
 	)
 	begin {
 		$ModuleLocations = @('C:\Program Files\WindowsPowerShell','C:\Program Files\PowerShell')
-		foreach ($ModulePath in $ModuleLocations) {
-			If (!(Test-Path "$($ModulePath)\Modules")) {
-				if ($PSCmdlet.ShouldProcess("$($ModulePath)\Modules", "Create Directory Item")) {
+		foreach ($ModuleLocationPath in $ModuleLocations) {
+			If (!(Test-Path "$($ModuleLocationPath)\Modules")) {
+				if ($PSCmdlet.ShouldProcess("$($ModuleLocationPath)\Modules", "Create Directory Item")) {
 					try {
-						New-Item -ItemType Directory -Path "$($ModulePath)\Modules"
+						New-Item -ItemType Directory -Path "$($ModuleLocationPath)\Modules"
 					} catch {
-						Write-Warning "Could not create path <$($ModulePath)\Modules>, will not create alias here"
+						Write-Warning "Could not create path <$($ModuleLocationPath)\Modules>, will not create alias here"
 					}
 				}
 			}
@@ -21,7 +21,7 @@ function New-ModuleAlias {
 	process {
 		foreach ($SourcePath in $ModulePath) {
 			if (Test-Path $SourcePath) {
-				$ItemObject = Get-Item $ModulePath
+				$ItemObject = Get-Item $SourcePath
 				if ($ItemObject.PSIsContainer) {
 					foreach ($ModulePath in $ModuleLocations) {
 						If (Test-Path "$($ModulePath)\Modules") {
