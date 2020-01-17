@@ -61,11 +61,11 @@
 	#FormatsToProcess = 'CSR.AD.Format.ps1xml'
 	
 	# Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-	#NestedModules = @(
-	#   './Public/Function.ps1',
-	#   './Public/Function2.ps1',
-	#   './Public/Function3.ps1'
-	#)
+	NestedModules = @(
+		'./Public/New-ModuleAlias.ps1' #,
+		#'./Public/Function2.ps1',
+		#'./Public/Function3.ps1'
+	)
 	
 	# Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 	FunctionsToExport = '*'
