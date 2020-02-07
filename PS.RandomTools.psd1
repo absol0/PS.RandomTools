@@ -4,10 +4,10 @@
 
 	# Script module or binary module file associated with this manifest.
 	# remove this if there is no root module and you are only used nested modules 
-	RootModule = 'PS.RandomTools.psm1'
+	#RootModule = 'PS.RandomTools.psm1'
 	
 	# Version number of this module.
-	ModuleVersion = '0.1'
+	ModuleVersion = '0.2'
 	
 	# Supported PSEditions
 	# CompatiblePSEditions = @()
@@ -62,7 +62,9 @@
 	
 	# Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 	NestedModules = @(
-		'./Public/New-ModuleAlias.ps1' #,
+		'./Public/New-ModuleAlias.ps1',
+		'./Public/Get-DNSIPAddress.ps1',
+		'./Public/Get-DNSName.ps1' #,
 		#'./Public/Function2.ps1',
 		#'./Public/Function3.ps1'
 	)
