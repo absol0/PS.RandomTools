@@ -2,7 +2,7 @@
 
 @{
 	# Version number of this module.
-	ModuleVersion = '0.3'
+	ModuleVersion = '0.4.0'
 	# Supported PSEditions
 	# CompatiblePSEditions = @()
 
@@ -52,13 +52,14 @@
 	# TypesToProcess = @()
 	
 	# Format files (.ps1xml) to be loaded when importing this module
-	#FormatsToProcess = 'CSR.AD.Format.ps1xml'
+	#FormatsToProcess = 'ModuleName.Format.ps1xml'
 	
 	# Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 	NestedModules = @(
-		'./Public/New-ModuleAlias.ps1',
 		'./Public/Get-DNSIPAddress.ps1',
-		'./Public/Get-DNSName.ps1' #,
+		'./Public/Get-DNSName.ps1',
+		'./Public/New-ModuleAlias.ps1',
+		'./Public/Test-TCPPort.ps1'
 		#'./Public/Function2.ps1',
 		#'./Public/Function3.ps1'
 	)
@@ -67,7 +68,8 @@
 	FunctionsToExport = @(
 		'New-ModuleAlias',
 		'Get-DNSIPAddress',
-		'Get-DNSName'
+		'Get-DNSName',
+		'Test-TCPPort'
 	)
 	
 	# Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
