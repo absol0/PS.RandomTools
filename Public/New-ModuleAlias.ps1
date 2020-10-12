@@ -5,7 +5,7 @@ function New-ModuleAlias {
 		[String[]]$ModulePath
 	)
 	begin {
-		$ModuleLocations = @('C:\Program Files\WindowsPowerShell','C:\Program Files\PowerShell')
+		$ModuleLocations = @('C:\Program Files\WindowsPowerShell','C:\Program Files\PowerShell', '~/.local/share/powershell')
 		foreach ($ModuleLocationPath in $ModuleLocations) {
 			If (!(Test-Path "$($ModuleLocationPath)\Modules")) {
 				if ($PSCmdlet.ShouldProcess("$($ModuleLocationPath)\Modules", "Create Directory Item")) {
