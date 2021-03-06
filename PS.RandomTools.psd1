@@ -2,7 +2,7 @@
 
 @{
 	# Version number of this module.
-	ModuleVersion = '0.4.0'
+	ModuleVersion = '0.5.0'
 	# Supported PSEditions
 	# CompatiblePSEditions = @()
 
@@ -60,6 +60,7 @@
 		'./Public/Get-DNSName.ps1',
 		'./Public/New-ModuleAlias.ps1',
 		'./Public/Test-TCPPort.ps1'
+		'./Public/Test-Ping.ps1'
 		#'./Public/Function2.ps1',
 		#'./Public/Function3.ps1'
 	)
@@ -69,7 +70,8 @@
 		'New-ModuleAlias',
 		'Get-DNSIPAddress',
 		'Get-DNSName',
-		'Test-TCPPort'
+		'Test-TCPPort',
+		'Test-Ping'
 	)
 	
 	# Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
